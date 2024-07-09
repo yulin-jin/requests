@@ -421,8 +421,8 @@ class PreparedRequest(RequestEncodingMixin, RequestHooksMixin):
         # Remove leading whitespaces from url
         url = url.lstrip()
 
-        # Don't do any URL preparation for non-HTTP schemes like `mailto`,
-        # `data` etc to work around exceptions from `url_parse`, which
+        # Don't do any URL preparation for non-HTTP schemes like ,
+        #  etc to work around exceptions from , which
         # handles RFC 3986 only.
         if ":" in url and not url.lower().startswith("http"):
             self.url = url
